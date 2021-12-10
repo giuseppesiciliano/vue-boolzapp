@@ -69,65 +69,25 @@
                     <div class="contacts-list">
                         <ul>
                             <!-- Single contact -->
-                            <li>
+                            <li v-for="contact in contacts">
                                 <div class="single-contact">
                                     <div class="avatar">
-                                        <img src="img/avatar_1.jpg" alt="">
+                                        <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.name">
                                     </div>
                                     <div class="contact-name">
-                                        Michele
+                                        {{contact.name}}
                                     </div>
                                 </div>
                             </li>
                             <!-- END Single contact -->
                             
-                            <!-- Single contact -->
-                            <li>
-                                <div class="single-contact">
-                                    <div class="avatar">
-                                        <img src="img/avatar_2.jpg" alt="">
-                                    </div>
-                                    <div class="contact-name">
-                                        Fabio
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- END Single contact -->
-
-                            <!-- Single contact -->
-                            <li>
-                                <div class="single-contact">
-                                    <div class="avatar">
-                                        <img src="img/avatar_3.jpg" alt="">
-                                    </div>
-                                    <div class="contact-name">
-                                        Samuele
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- END Single contact -->
-
-                            <!-- Single contact -->
-                            <li>
-                                <div class="single-contact">
-                                    <div class="avatar">
-                                        <img src="img/avatar_4.jpg" alt="">
-                                    </div>
-                                    <div class="contact-name">
-                                        Luisa
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- END Single contact -->
+                            
                         </ul>
                     </div>
                     <!-- END CONTACTS LIST -->
 
                 </div>
                 <!-- END Col-left -->
-
-
-
 
 
                 <!-- Col-right -->

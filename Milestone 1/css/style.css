@@ -42,9 +42,35 @@ ul {
 
     background-color: #eaeaea;
 }
+/* Notifications */
 .notifications {
     height: 110px;
     background-color: #8edafb;
+    display: flex;
+    align-items: center;
+}
+.notify-icon {
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 0 30px;
+}
+.notify-icon i {
+    font-size: 25px;
+    color: #8edafb;
+}
+.notify-text div {
+    font-size: 20px;
+    font-weight: bold;
+}
+.notify-text span {
+    font-size: 17px;
+    color: #507686;
+    text-decoration: underline;
 }
 
 /* Seaarch Bar */
@@ -69,13 +95,13 @@ ul {
 }
 .filter input {
     height: 30px;
-    width: 440px;
+    width: 100%;
     margin: 5px;
 }
 
 
 
-
+/* CONTACTS LIST */
 .contacts-list {
     height: calc(100% - 260px);
     overflow: hidden;

@@ -21,6 +21,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+}
 
-    background-color: brown;
+.col-left {
+    height: 100%;
+    width: 30%;
+
+    background-color: pink;
+}
+
+.col-right {
+    height: 100%;
+    width: 70%;
+
+    background-color: yellow;
 }

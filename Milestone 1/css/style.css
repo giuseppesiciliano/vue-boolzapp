@@ -51,8 +51,10 @@ ul {
 }
 .contacts-list {
     height: calc(100% - 270px);
+    overflow: hidden;
+    overflow-y: auto;
 
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 

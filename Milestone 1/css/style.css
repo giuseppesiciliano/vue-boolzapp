@@ -42,12 +42,30 @@ ul {
 .contact {
     height: 100px;
     background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
 }
-
+.profile {
+    display: flex;
+    align-items: center;
+}
+.profile img {
+    width: 70px;
+    border-radius: 50%;
+}
+.options {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #b1b1b1;
+}
+.options i {
+    padding: 0 10px;
+}
 
 /* Notifications */
 .notifications {
-    height: 110px;
+    height: 100px;
     background-color: #8edafb;
     display: flex;
     align-items: center;
@@ -74,6 +92,7 @@ ul {
     font-size: 17px;
     color: #507686;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 
@@ -108,7 +127,7 @@ ul {
 
 /* CONTACTS LIST */
 .contacts-list {
-    height: calc(100% - 260px);
+    height: calc(100% - 250px);
     overflow: hidden;
     overflow-y: auto;
 

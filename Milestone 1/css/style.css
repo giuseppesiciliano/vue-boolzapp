@@ -33,6 +33,8 @@ ul {
 .col-left {
     height: 100%;
     width: 30%;
+    min-width: 300px;
+    border-right: 1px solid lightgray;
 }
 .contact {
     height: 100px;
@@ -62,6 +64,15 @@ ul {
 .col-right {
     height: 100%;
     width: 70%;
+    min-width: 600px;
 
     background-color: yellow;
+}
+.background-main{
+    background-image: url("../img/mine.jpg");
+    height: calc(100% - 200px);
+}
+.input-area {
+    height: 100px;
+    background-color: #f3eeea;
 }

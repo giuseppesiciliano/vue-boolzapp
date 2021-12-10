@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Common */
+ul {
+    list-style-type: none;
+}
+
 .app-wrapper {
     height: 100vh;
     width: 100%;
@@ -24,12 +29,33 @@
     display: flex;
 }
 
+/* COL LEFT */
 .col-left {
     height: 100%;
     width: 30%;
-
-    background-color: pink;
 }
+.contact {
+    height: 100px;
+
+    background-color: #eaeaea;
+}
+.notifications {
+    height: 120px;
+
+    background-color: #8edafb;
+}
+.search-bar {
+    height: 50px;
+
+    background-color: seagreen;
+}
+.contacts-list {
+    height: calc(100% - 270px);
+
+    background-color: #ffffff;
+}
+
+
 
 .col-right {
     height: 100%;

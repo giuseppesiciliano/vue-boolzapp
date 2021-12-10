@@ -37,11 +37,14 @@ ul {
     min-width: 300px;
     border-right: 1px solid lightgray;
 }
+
+/* Contact */
 .contact {
     height: 100px;
-
     background-color: #eaeaea;
 }
+
+
 /* Notifications */
 .notifications {
     height: 110px;
@@ -73,7 +76,8 @@ ul {
     text-decoration: underline;
 }
 
-/* Seaarch Bar */
+
+/* Search Bar */
 .search-bar {
     height: 50px;
     background-color: #fafafa;
@@ -87,6 +91,7 @@ ul {
     display: flex;
     background-color: white;
     width: 95%;
+    border: 1px solid lightgray;
 }
 .filter i {
     color: #b6b9bc;
@@ -97,8 +102,8 @@ ul {
     height: 30px;
     width: 100%;
     margin: 5px;
+    border: 0px solid;
 }
-
 
 
 /* CONTACTS LIST */

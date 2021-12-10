@@ -19,7 +19,7 @@ ul {
 }
 
 .app {
-    width: 90%;
+    width: 80%;
     height: 90%;
     margin: auto;
     position: absolute;
@@ -42,17 +42,15 @@ ul {
     background-color: #eaeaea;
 }
 .notifications {
-    height: 120px;
-
+    height: 110px;
     background-color: #8edafb;
 }
 .search-bar {
     height: 50px;
-
-    background-color: seagreen;
+    background-color: #fafafa;
 }
 .contacts-list {
-    height: calc(100% - 270px);
+    height: calc(100% - 260px);
     overflow: hidden;
     overflow-y: auto;
 

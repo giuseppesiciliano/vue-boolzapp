@@ -30,6 +30,7 @@ ul {
     display: flex;
 }
 
+
 /* COL LEFT */
 .col-left {
     height: 100%;
@@ -37,6 +38,7 @@ ul {
     min-width: 400px;
     border-right: 1px solid lightgray;
 }
+
 
 /* Contact */
 .contact {
@@ -57,6 +59,10 @@ ul {
 .profile span {
     font-size: 20px;
 }
+.profile-text div {
+    color: gray;
+    font-size: 17px;
+}
 .options {
     display: flex;
     align-items: center;
@@ -67,6 +73,7 @@ ul {
     padding-right: 30px;
     cursor: pointer;
 }
+
 
 /* Notifications */
 .notifications {
@@ -162,6 +169,7 @@ ul {
     width: 70%;
     min-width: 600px;
 }
+/* Main Message */
 .background-main{
     background-image: url("../img/mine.jpg");
     height: calc(100% - 200px);

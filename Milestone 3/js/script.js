@@ -115,13 +115,17 @@ const app = new Vue(
             },
             // Aggiungere un nuovo messaggio
             addNewMessage: function() {
-                this.contacts[this.activeContact].messages.push({
-                    date: '28/03/2020 10:20:10',
-                    text: this.newMessage,
-                    status: 'sent'
-                });
-                this.newMessage="";
-                this.respond();
+                if (this.newMessage.length > 0) {
+                    this.contacts[this.activeContact].messages.push({
+                        date: '28/03/2020 10:20:10',
+                        text: this.newMessage,
+                        status: 'sent'
+                    });
+                    this.newMessage="";
+                    this.respond();
+                }else {
+                    alert('Non puoi inviare del testo vuoto');
+                }
             },
         },
     }

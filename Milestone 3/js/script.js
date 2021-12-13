@@ -79,7 +79,7 @@ const app = new Vue(
                     ],
                 },
                 {
-                    name: 'Luisa',
+                    name: 'Luigi',
                     avatar: '_4',
                     visible: true,
                     messages: [
@@ -99,9 +99,21 @@ const app = new Vue(
         },
 
         methods: {
+            // Selezionare il contatto
             selectContact: function(index) {
                 this.activeContact = index;
             },
+            // Riposta del computer
+            respond: function(){
+                setTimeout(()=>{
+                    this.contacts[this.activeContact].messages.push({
+                        date: '28/03/2020 10:20:10',
+                        text: 'ok',
+                        status: 'received'
+                    });
+                }, 1000)
+            },
+            // Aggiungere un nuovo messaggio
             addNewMessage: function() {
                 this.contacts[this.activeContact].messages.push({
                     date: '28/03/2020 10:20:10',
@@ -109,7 +121,8 @@ const app = new Vue(
                     status: 'sent'
                 });
                 this.newMessage="";
-            }
+                this.respond();
+            },
         },
     }
 );

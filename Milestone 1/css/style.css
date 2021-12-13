@@ -11,35 +11,6 @@ ul {
     background-color: #fafafa;
 }
 
-.app-wrapper {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-
-    background-color: #009688;
-}
-
-.app {
-    width: 80%;
-    height: 90%;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-}
-
-
-/* COL LEFT */
-.col-left {
-    height: 100%;
-    width: 30%;
-    min-width: 400px;
-    border-right: 1px solid lightgray;
-}
-
-
 /* Contact */
 .contact {
     height: 100px;
@@ -73,6 +44,35 @@ ul {
     padding-right: 30px;
     cursor: pointer;
 }
+
+.app-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    
+    background:linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
+}
+
+.app {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+
+/* COL LEFT */
+.col-left {
+    height: 100%;
+    width: 30%;
+    min-width: 400px;
+    border-right: 1px solid lightgray;
+}
+
 
 
 /* Notifications */
@@ -141,7 +141,7 @@ ul {
 /* CONTACTS LIST */
 .contacts-list {
     height: calc(100% - 250px);
-    overflow: hidden;
+    /* overflow: hidden; */
     overflow-y: auto;
 
     background-color: #fff;
@@ -169,11 +169,41 @@ ul {
     width: 70%;
     min-width: 600px;
 }
+
 /* Main Message */
 .background-main{
     background-image: url("../img/mine.jpg");
     height: calc(100% - 200px);
 }
+.container {
+    padding: 70px;
+}
+.single-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+    min-width: 30%;
+    max-width: 48%;
+    border-radius: 10px;
+}
+
+
+
+.sent {
+    clear: both;
+    float: right;
+    background-color: #d5f9ba;
+}
+
+.received {
+    clear: both;
+    float: left;
+    background-color: white;
+}
+
+
+
+
 
 /* Input Area */
 .input-area {

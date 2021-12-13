@@ -70,7 +70,7 @@
                     <div class="contacts-list">
                         <ul>
                             <!-- Single contact -->
-                            <li v-for="contact in contacts">
+                            <li @click="selectContact(index)" v-for="(contact, index) in contacts">
                                 <div class="single-contact">
                                     <div class="avatar">
                                         <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.name">

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- VUE.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+
+
+<body>
+    <div id="root">
+
+        <div class="app-wrapper">
+
+            <div class="app">
+
+                <!-- Col-left -->
+                <div class="col-left">
+
+                    <!-- Contact -->
+                    <div class="contact">
+                        <div class="profile">
+                            <img src="img/avatar_io.jpg" alt="">
+                            <span>Nome utente</span>
+                        </div>
+
+                        <div class="options">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <!-- END Contact -->
+
+                    <!-- Notifications -->
+                    <div class="notifications">
+
+                        <div class="notify-icon">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+
+                        <div class="notify-text">
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <span>Attiva notifiche desktop</span>
+                        </div>
+                    </div>
+                    <!-- END Notifications -->
+
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <div class="filter">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+                    <!-- END Search Bar -->
+
+                    <!-- CONTACTS LIST -->
+                    <div class="contacts-list">
+                        <ul>
+                            <!-- Single contact -->
+                            <li @click="selectContact(index)" v-for="(contact, index) in contacts">
+                                <div class="single-contact">
+                                    <div class="avatar">
+                                        <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.name">
+                                    </div>
+                                    <div class="contact-name">
+                                        {{contact.name}}
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- END Single contact -->
+                            
+                            
+                        </ul>
+                    </div>
+                    <!-- END CONTACTS LIST -->
+
+                </div>
+                <!-- END Col-left -->
+
+
+                <!-- Col-right -->
+                <div class="col-right">
+
+                    <!-- Contact -->
+                    <div class="contact">
+                        <div class="profile">
+                            <img :src="'img/avatar' + contacts[activeContact].avatar + '.jpg'" alt="'avatar' + contacts[activeContact].name">
+                            <div class="profile-text">
+                                <span>{{contacts[activeContact].name}}</span>
+                                <div>ultimo accesso oggi alle</div>
+                            </div>
+                        </div>
+
+                        <div class="options">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <!-- END Contact -->
+
+                    <!-- Main Message -->
+                    <div class="background-main">
+                        <div class="container">
+
+                            <!-- Single Message -->
+                            <div v-for="message in contacts[activeContact].messages" class="single-message" :class="message.status">
+                                {{message.text}}
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- END Main Message -->
+
+                    <!-- Input Area -->
+                    <div class="input-area">
+                        <i class="far fa-smile"></i>
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addNewMessage">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <!-- END Input Area -->
+
+                </div>
+                <!-- END Col-right -->
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

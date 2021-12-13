@@ -97,9 +97,9 @@
                     <!-- Contact -->
                     <div class="contact">
                         <div class="profile">
-                            <img src="img/avatar_3.jpg" alt="">
+                            <img :src="'img/avatar' + contacts[activeContact].avatar + '.jpg'" alt="'avatar' + contacts[activeContact].name">
                             <div class="profile-text">
-                                <span>Samuele</span>
+                                <span>{{contacts[activeContact].name}}</span>
                                 <div>ultimo accesso oggi alle</div>
                             </div>
                         </div>

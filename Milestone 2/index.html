@@ -114,23 +114,11 @@
 
                     <!-- Main Message -->
                     <div class="background-main">
-
                         <div class="container">
 
-                            <div class="single-message sent">
-                                ok
-                            </div>
-
-                            <div class="single-message received">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate sint aliquam animi asperiores excepturi pariatur magnam non, neque corporis dolores amet nostrum reiciendis ratione temporibus beatae consequuntur fugit hic porro!
-                            </div>
-
-                            <div class="single-message sent">
-                                Ciao sono un messaggio
-                            </div>
-
-                            <div class="single-message received">
-                                Ciao sono un messaggio
+                            <!-- Single Message -->
+                            <div v-for="message in contacts[activeContact].messages" class="single-message" :class="message.status">
+                                {{message.text}}
                             </div>
 
                         </div>

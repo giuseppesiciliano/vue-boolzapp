@@ -205,8 +205,11 @@ ul {
     float: left;
     background-color: white;
 }
-
-
+.message-data {
+    font-size: 13px;
+    text-align: right;
+    padding-top: 3px;
+}
 
 
 

@@ -61,7 +61,7 @@
                     <div class="search-bar">
                         <div class="filter">
                             <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="filterText">
                         </div>
                     </div>
                     <!-- END Search Bar -->
@@ -117,8 +117,16 @@
                         <div class="container">
 
                             <!-- Single Message -->
-                            <div v-for="message in contacts[activeContact].messages" class="single-message" :class="message.status">
+                            <div 
+                            v-for="message in contacts[activeContact].messages" 
+                            class="single-message" 
+                            :class="message.status"
+                            >
                                 {{message.text}}
+
+                                <div class="message-data">
+                                    {{message.date}}
+                                </div>
                             </div>
 
                         </div>
@@ -139,6 +147,8 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

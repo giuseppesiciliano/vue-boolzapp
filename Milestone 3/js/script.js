@@ -107,7 +107,7 @@ const app = new Vue(
             respond: function(){
                 setTimeout(()=>{
                     this.contacts[this.activeContact].messages.push({
-                        date: '28/03/2020 10:20:10',
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                         text: 'ok',
                         status: 'received'
                     });
@@ -117,7 +117,7 @@ const app = new Vue(
             addNewMessage: function() {
                 if (this.newMessage.length > 0) {
                     this.contacts[this.activeContact].messages.push({
-                        date: '28/03/2020 10:20:10',
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                         text: this.newMessage,
                         status: 'sent'
                     });

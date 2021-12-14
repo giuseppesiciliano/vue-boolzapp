@@ -61,7 +61,12 @@
                     <div class="search-bar">
                         <div class="filter">
                             <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="filterText">
+                            <input 
+                                type="text" 
+                                placeholder="Cerca o inizia una nuova chat"
+                                v-model="nameFilterText"
+                                @keyup="filterContactsByName()"
+                            >
                         </div>
                     </div>
                     <!-- END Search Bar -->
@@ -70,7 +75,11 @@
                     <div class="contacts-list">
                         <ul>
                             <!-- Single contact -->
-                            <li @click="selectContact(index)" v-for="(contact, index) in contacts">
+                            <li 
+                                @click="selectContact(index)" 
+                                v-for="(contact, index) in contacts"
+                                v-if="contact.visible"
+                            >
                                 <div class="single-contact">
                                     <div class="avatar">
                                         <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.name">

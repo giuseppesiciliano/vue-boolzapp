@@ -80,7 +80,7 @@
                                 v-for="(contact, index) in contacts"
                                 v-if="contact.visible"
                             >
-                                <div class="single-contact">
+                                <div class="single-contact" :class="{'active': index=== activeContact}">
                                     <div class="avatar">
                                         <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.name">
                                     </div>
@@ -138,7 +138,7 @@
                                 </div>
 
                                 <div class="option-message">
-                                    <i @click="viewOptions" class="fas fa-angle-down"></i>
+                                    <i class="fas fa-angle-down"></i>
                                     <div class="window">
                                         <span>Message info</span>
                                         <span>Delete message</span>

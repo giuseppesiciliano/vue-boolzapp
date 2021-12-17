@@ -11,6 +11,7 @@ const app = new Vue(
         data: {
             nameFilterText: "",
             activeContact: 0,
+            activeMessage: null,
             newMessage: "",
             contacts: [
                 {
@@ -103,6 +104,9 @@ const app = new Vue(
             // Selezionare il contatto
             selectContact: function(index) {
                 this.activeContact = index;
+
+                // Se cambio finestra di chat...
+                this.activeMessage = null;
             },
             // Riposta del computer
             respond: function(){
@@ -137,6 +141,21 @@ const app = new Vue(
                         element.visible = false;
                     }
                 })
+            },
+            // Al click sulla freccetta, si aprono le opzioni del messaggio
+            viewOptionsWindow: function(index) {
+                if(index === this.activeMessage) {
+                    this.activeMessage = null;
+                } else {
+                    this.activeMessage = index;
+                }
+            },
+            // Cancella il messaggio
+            deleteMessage: function(index) {
+                this.contacts[this.activeContact].messages.splice(index, 1);
+
+                // Per evitare che si riapra la finestra delle opzioni...
+                this.activeMessage = null;
             }
         },
     }

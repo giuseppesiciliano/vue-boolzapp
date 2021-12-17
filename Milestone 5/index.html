@@ -127,7 +127,7 @@
 
                             <!-- Single Message -->
                             <div 
-                            v-for="message in contacts[activeContact].messages" 
+                            v-for="(message, index) in contacts[activeContact].messages" 
                             class="single-message" 
                             :class="message.status"
                             >
@@ -138,10 +138,10 @@
                                 </div>
 
                                 <div class="option-message">
-                                    <i class="fas fa-angle-down"></i>
-                                    <div class="window">
+                                    <i class="fas fa-angle-down" @click="viewOptionsWindow(index)"></i>
+                                    <div v-if="index === activeMessage" class="window">
                                         <span>Message info</span>
-                                        <span>Delete message</span>
+                                        <span @click="deleteMessage(index)">Delete message</span>
                                     </div>
                                 </div>
                             </div>
